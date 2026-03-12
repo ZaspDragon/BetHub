@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BetHub v3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+<h1>BetHub v3</h1>
+</header>
+
+<div class="container">
+
+<h2>Prop Builder</h2>
+
+<label>Player</label>
+<input id="playerSearch" placeholder="Type player name..." oninput="filterPlayers()">
+<select id="playerSelect" onchange="loadPlayerStats()"></select>
+
+<div class="stats">
+<p>PPG: <span id="ppg">-</span></p>
+<p>RPG: <span id="rpg">-</span></p>
+<p>APG: <span id="apg">-</span></p>
+</div>
+
+<label>Prop</label>
+<input id="prop" placeholder="Example: 20+ Points">
+
+<label>Odds</label>
+<input id="odds" placeholder="-150">
+
+<label>Last10 Hit %</label>
+<input id="last10">
+
+<label>Matchup Score</label>
+<input id="matchup">
+
+<label>Minutes Stability</label>
+<input id="minutes">
+
+<label>Pace Score</label>
+<input id="pace">
+
+<label>Usage Boost</label>
+<input id="usage">
+
+<button onclick="calculate()">Calculate Edge</button>
+
+<div class="results">
+<p>Implied Probability: <span id="implied"></span></p>
+<p>Model Probability: <span id="model"></span></p>
+<p>Edge: <span id="edge"></span></p>
+<p id="decision"></p>
+</div>
+
+</div>
+
+<script src="players.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
